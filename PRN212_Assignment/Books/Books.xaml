@@ -1,0 +1,41 @@
+﻿<Window x:Class="PRN212_Assignment.Books.Books"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Books" Height="683" Width="667">
+    <Grid>
+        <TextBox x:Name="searchTextBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="541"/>
+        <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" Margin="579,9,0,0" VerticalAlignment="Top" Width="75" Click="SearchButton_Click"/>
+        <DataGrid x:Name="booksDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="192" Margin="10,50,0,0" VerticalAlignment="Top" Width="644" SelectionChanged="BooksDataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Book ID" Binding="{Binding BookId}" />
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" />
+                <DataGridTextColumn Header="Author" Binding="{Binding Author}" />
+                <DataGridTextColumn Header="Genre" Binding="{Binding Genre}" />
+                <DataGridTextColumn Header="Publication Year" Binding="{Binding PublicationYear}" />
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <GroupBox Header="Book Details" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Width="644" Height="373">
+            <Grid Height="357">
+                <Label Content="Book ID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="bookIdTextBox" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Width="150"/>
+                <Label Content="Title" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Margin="150,56,0,0" VerticalAlignment="Top" Width="150"/>
+                <Label Content="Author" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="authorTextBox" HorizontalAlignment="Left" Margin="150,102,0,0" VerticalAlignment="Top" Width="150"/>
+                <Label Content="Genre" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Margin="150,148,0,0" VerticalAlignment="Top" Width="150"/>
+                <Label Content="Publication Year" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="publicationYearTextBox" HorizontalAlignment="Left" Margin="150,194,0,0" VerticalAlignment="Top" Width="150"/>
+                <Label Content="Status" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="statusComboBox" HorizontalAlignment="Left" Margin="150,240,0,0" VerticalAlignment="Top" Width="150"
+                  ItemsSource="{Binding StatusOptions}" SelectedItem="{Binding SelectedStatus}"/>
+
+
+                <Button x:Name="addBookButton" Content="Add Book" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" Width="150" Height="39" Click="AddBookButton_Click"/>
+                <Button x:Name="editBookButton" Content="Edit Book" HorizontalAlignment="Left" Margin="170,286,0,0" VerticalAlignment="Top" Width="150" Height="39" Click="EditBookButton_Click"/>
+                <Button x:Name="deleteBookButton" Content="Delete Book" HorizontalAlignment="Left" Margin="330,286,0,0" VerticalAlignment="Top" Width="150" Height="39" Click="DeleteBookButton_Click"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

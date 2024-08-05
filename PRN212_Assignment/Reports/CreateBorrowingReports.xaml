@@ -1,0 +1,25 @@
+﻿<Window x:Class="PRN212_Assignment.Reports.CreateBorrowingReports"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create Borrowing Report" Height="371" Width="364">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Book ID" />
+            <TextBox x:Name="txtBookID" />
+
+            <TextBlock Text="Member ID" Margin="0,10,0,0"/>
+            <TextBox x:Name="txtMemberID" />
+
+            <TextBlock Text="Borrow Date" Margin="0,10,0,0"/>
+            <DatePicker x:Name="dpBorrowDate" />
+
+            <TextBlock Text="Return Date" Margin="0,10,0,0"/>
+            <DatePicker x:Name="dpReturnDate" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                <Button Content="Add Borrowing" Click="AddBorrowing_Click" Margin="0,0,10,0"/>
+                <Button Content="Cancel" Click="Cancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

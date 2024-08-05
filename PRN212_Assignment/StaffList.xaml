@@ -1,0 +1,35 @@
+﻿<Window x:Class="PRN212_Assignment.StaffList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Staff List" Height="502" Width="649">
+    <Grid>
+        <DataGrid x:Name="staffDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Top" Width="600" Margin="10,55,0,0" Height="197" SelectionChanged="StaffDataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Staff ID" Binding="{Binding StaffId}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Username" Binding="{Binding Username}" />
+                <DataGridTextColumn Header="Role" Binding="{Binding Role}" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBox x:Name="searchTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="495" Margin="10,10,0,0" Height="23"/>
+        <Button Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="510,10,0,0" Click="SearchButton_Click"/>
+
+        <Label Content="Staff ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,276,0,0" Height="26" Width="70"/>
+        <TextBox x:Name="staffIdTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,276,0,0" Width="150" Height="18"/>
+
+        <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,316,0,0" Height="26" Width="42"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,316,0,0" Width="150" Height="18"/>
+
+        <Label Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,356,0,0" Height="26" Width="70"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,356,0,0" Width="150" Height="18"/>
+
+        <Label Content="Role" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,396,0,0" Height="26" Width="42"/>
+        <ComboBox x:Name="roleComboBox" ItemsSource="{Binding _validRoles}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,396,0,0" Width="150"/>
+
+
+        <Button Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="10,436,0,0" Click="UpdateButton_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="120,436,0,0" Click="DeleteButton_Click"/>
+    </Grid>
+</Window>

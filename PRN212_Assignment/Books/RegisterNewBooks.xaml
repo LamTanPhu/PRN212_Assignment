@@ -1,0 +1,30 @@
+﻿<Window x:Class="PRN212_Assignment.Books.RegisterNewBooks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Register New Book" Height="414" Width="350">
+    <Grid>
+        <GroupBox Header="New Book Details" Margin="10">
+            <Grid>
+                <Label Content="Book ID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="bookIdTextBox" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Width="150"/>
+
+                <Label Content="Title" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Margin="150,60,0,0" VerticalAlignment="Top" Width="150"/>
+
+                <Label Content="Author" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="authorTextBox" HorizontalAlignment="Left" Margin="150,110,0,0" VerticalAlignment="Top" Width="150"/>
+
+                <Label Content="Genre" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Margin="150,160,0,0" VerticalAlignment="Top" Width="150"/>
+
+                <Label Content="Publication Year" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="publicationYearTextBox" HorizontalAlignment="Left" Margin="150,210,0,0" VerticalAlignment="Top" Width="150"/>
+
+                <Label Content="Status" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="statusTextBox" HorizontalAlignment="Left" Margin="150,260,0,0" VerticalAlignment="Top" Width="150"/>
+
+                <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Center" Margin="0,311,0,0" VerticalAlignment="Top" Width="150" Click="RegisterButton_Click"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
